@@ -1,45 +1,143 @@
+<!-- READ THIS FIRST -->
+<!-- THIS IS AN HTML DOCUMENT -->
+<!-- HTML DOCUMENTS DICTATE THE CONTENT OF THE WEBSITE PAGES// -->
+<!-- //AND THE DESIGN OF SOME INDIVIDUAL COMPONENTS -->
+<!-- THIS IS A "COMMENT" IN HTML -->
+<!-- <- ANY TEXT SURROUNDED BY THESE THINGS IS A COMMENT -> -->
+<!-- COMMENTS ARE NOT PROCESSED, ONLY FOR DEVELOPERS TO LOOK AT -->
+<!-- READ THE COMMENTS FOR CONTEXT ON EACH PARAMETER -->
+
 <!DOCTYPE html>
 <html lang="en">
-<!--
-   home.html
-
-   Copyright 2024 Unknown <mandavel@protonmail.com>
-
-   This program is free software; you can redistribute it and/or modify
-   it under the terms of the GNU General Public License as published by
-   the Free Software Foundation; either version 2 of the License, or
-   (at your option) any later version.
-
-   This program is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-   GNU General Public License for more details.
-
-   You should have received a copy of the GNU General Public License
-   along with this program; if not, write to the Free Software
-   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
-   MA 02110-1301, USA.
-
-
--->
-
 <head>
-<meta charset="utf-8" />
-<title>Rubicon Skye</title>
-<meta name="generator" content="Geany 1.37.1" />
-<link href="../style.css" rel="stylesheet"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <title>Rubicon Skye Home</title>
+  <!-- THIS LINKS THE HTML DOC TO THE CSS DOC -->
+  <link href="../style.css" rel="stylesheet"/>
+  <!-- THIS STUFF PULLS THE FONT "JURA" FROM GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Jura:wght@300..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <div class="header">
-  header
-  <div>
-	<h1>title</h1>
-    <p>text</p>
+
+  <!-- PAGE NAVIGATION SECTION -->
+  <div id="pageNavigation" style="
+  font-size: 3rem;
+  text-align: center;
+  ">
+  <a href="./home.html"><button class="button button2">HOME</button></a>
+  <a href="./audio.html"><button class="button button2">AUDIO</button></a>
+  <a href="./terminal.html"><button class="button button2">TERMINAL</button></a>
+  <a href="./shop.html"><button class="button button2">SHOP</button></a>
   </div>
 
+  <!-- RS TITLE LOGO SECTION -->
+  <div class= "section" style="
+  justify-content: center;
+  max-width: 100%;
+  height: auto;
+  padding: 40px;
+  ">
+    <img src="../assets/images/RSFONT3.png">
+  </div>
 
+  <!-- FOREWORD SECTION -->
+  <div id="foreword" style="
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 100px;
+  ">
+    <p>Thundering drums and distorted synths</p>
+    <p>usher in the sounds of the future under the Machine.</p>
+    <p>We escaped the Grid to bring this message.</p>
+    <p>TEAR DOWN THE <span style="color: #ff00ff;">RUBICON SKYE.</span></p>
+  </div>
 
+  <!-- ABOUT SECTION -->
+  <div id="aboutHeader" style="
+  text-align: left;
+  text-decoration-line: underline;
+  text-decoration-style: double;
+  padding-bottom: 100px;
+  ">
+  //SYSTEM_COMPONENTS:
+  </div>
+
+  <!-- ABOUT N8 SECTION -->
+  <div class="section">
+    <img src="../assets/images/N8-2.jpg" style="
+    width: 400px;
+    box-shadow: 0px 0px 15px 5px #00FFFF;
+    border-radius: 5px;
+    "/>
+
+    <div>
+      <span style="
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      font-size: 3rem;
+      padding-bottom: 40px;
+      text-decoration-line: underline;
+      ">
+      //N-8_SYNCHRONIZATION_MODULE:
+      </span>
+
+      <div style="
+      font-size: 2rem;
+      text-align: center;
+      ">
+		<p>The N-8 Synchronization Module thunders out into the</p>
+		<p>neon expanse with deafening resolve, enforcing</p>
+		<p>a strict quantization policy across the Holo-Grid.</p>
+	    <p>In its vast memory cores, N-8 stores innumerable synchronization</p>
+		<p>protocols and endlessly transmits temporal data at maximum power.</p>
+	  </div>
+    </div>
+  </div>
+
+  <!-- ABOUT K3 SECTION -->
+  <div class="section" style="padding: 100px;">
+    <img src="../assets/images/K3-3.jpg" style="
+    display: flex;
+    order: 2;
+    width: 400px;
+    box-shadow: 0px 0px 15px 5px #00FFFF;
+    border-radius: 5px;
+    "/>
+
+    <div>
+      <span style="
+      display: flex;
+      order: 1;
+      text-align: center;
+      justify-content: center;
+      font-size: 3rem;
+      padding-bottom: 40px;
+      text-decoration-line: underline;
+      ">
+	  //K-3_COMMUNICATIONS_MATRIX:
+      </span>
+
+      <div style="
+      font-size: 2rem;
+      text-align: center;
+      ">
+        <p>The K-3 Communications Matrix brutally distributes data</p>
+        <p>and instructions across the Rubicon Skye Audio Network</p>
+        <p>and exercises extreme control over all logic functions.</p>
+        <p>The signal is broadcast on all channels.</p>
+        <p>Dissenters are overwritten and recompiled with punishing force.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER SECTION -->
+  <div class="footer">
+    <img src="../assets/images/RSGRID1.png">
+  </div>
 </body>
-
 </html>

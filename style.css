@@ -1,37 +1,89 @@
-body { /* GLOBAL WEBSITE PARAMETERS */
+/* READ THIS FIRST */
+/* THIS IS A CSS DOCUMENT */
+/* CSS DOCUMENTS DICTATE THE LOOK, STRUCTURE AND LAYOUT OF THE WEBSITE PAGES */
+/* THIS IS A "COMMENT" IN CSS */
+/* <- ANY TEXT SURROUNDED BY THESE THINGS IS A COMMENT -> */
+/* COMMENTS ARE NOT PROCESSED, ONLY FOR DEVELOPERS TO LOOK AT */
+/* READ THE COMMENTS FOR CONTEXT ON EACH PARAMETER */
+
+				/* THESE ARE GLOBAL WEBSITE PARAMETERS */
+
+body {
+  /* All pages backgrounds - black with magenta gradient at bottom */
+  background-image: linear-gradient(to bottom, #000000 60%, #400040);
+  background-attachment: fixed;
   background-size: 100% 100%;
   background-position: 0px 0px;
-  /* Background gradient - black, 71% of page, dark magenta */
-  background-image: linear-gradient(#000000 71%, #400040);
   background-repeat: no-repeat;
-  background-attachment: fixed;
   /* Page margins - top, left/right, bottom */
-  padding: 25px 100px 25px;
-  /* Root font size - all font sizes are multiples of this number (2rem, 3rem etc) */
-  font-size: 48px;
+  margin: 1% 5% 0%;
+  /* Global font and text info */
+  font-family: "Jura", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  /* Root font size - all font sizes are factors of this number (2rem, 3rem etc) */
+  font-size: 64px;
+  /* Global text color */
+  color: #00FFFF;
+  /* This makes the text look glowy */
+  text-shadow: 0 0 10px #00FFFF;
 }
 
-h1 { /* h1 text parameters */
-  color: #00FFFF;
+				/* GLOBAL PAGE COMPONENTS */
+				/* COMPONENTS THAT ARE PRESENT ON EVERY PAGE */
+
+.pageNavigation { /* Page navigation buttons, top of every page */
   font-size: 4rem;
-  text-align: center;
-  /* Text glow effect */
-  text-shadow: 0 0 5px #00FFFF;
-  text-align: center;
+  margin: 0% 25% 25%;
+  align: center;
+  justify-content: center;
 }
 
-p {
-  /* p text parameters */
-  color: #00FFFF;
-  font-size: 2rem;
-  /* Text glow effect */
-  text-shadow: 0 0 5px #00FFFF;
+.section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px 20px; /* row-gap column gap */
 }
 
-.header {
-  align-content: center; /* ???? */
+.blogPost {
+  display: flex;
+  flex-direction: column;
+  margin: 5% 5% 20%;
+  border-width: 2px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px 5px #00FFFF;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  color: #ff00ff;
+  padding: 15px 32px;
+  font-family: "Jura", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+  display: inline-block;
+  font-size: 32px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.button2:hover {
   color: #00FFFF;
-  font-size: 4rem;
-  /* Text glow effect */
-  text-shadow: 0 0 5px #00FFFF;
+  text-shadow: 0 0 40px #00FFFF;
+}
+
+.footer { /* Grid image at bottom of every page */
+  display: flex;
+  justify-content: center;
+  width: auto;
+  margin-top: 5%;
 }
