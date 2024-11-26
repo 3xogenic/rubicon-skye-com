@@ -8,4 +8,5 @@ roadmap:
 - Integrate audio streaming
 - Integrate Printify shop
 - Integrate blogposting mechanism
+- Comments/instructions for non-coding bandmates
 - Take over the world
