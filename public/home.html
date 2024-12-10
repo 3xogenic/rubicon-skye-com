@@ -1,14 +1,17 @@
-<!-- READ THIS FIRST -->
+<!-- NATE, READ THIS FIRST -->
 <!-- THIS IS AN HTML DOCUMENT -->
 <!-- HTML DOCUMENTS DICTATE THE CONTENT OF THE WEBSITE PAGES// -->
 <!-- //AND THE DESIGN OF SOME INDIVIDUAL COMPONENTS -->
 <!-- THIS IS A "COMMENT" IN HTML -->
 <!-- <- ANY TEXT SURROUNDED BY THESE THINGS IS A COMMENT -> -->
-<!-- COMMENTS ARE NOT PROCESSED, ONLY FOR DEVELOPERS TO LOOK AT -->
+<!-- COMMENTS ARE NOT PROCESSED, ONLY FOR DEVELOPERS TO READ -->
 <!-- READ THE COMMENTS FOR CONTEXT ON EACH PARAMETER -->
 
+<!-- THIS IS THE "HOME" PAGE -->
+
+<!-- THE "HTML" AND "HEAD" SECTION IS FOR PAGE METADATA AND BEHIND THE SCENES STUFF -->
 <!DOCTYPE html>
-<html lang="en" style="min-height: 100vh;">
+<html lang="en" style="min-height: 100vh">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8" />
@@ -21,18 +24,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Jura:wght@300..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 
+<!-- VISIBLE PAGE CONTENT -->
 <body>
   <!-- PAGE NAVIGATION SECTION -->
-  <div class="section" id="nav">
+  <nav class="section" id="nav">
+<!-- PAGE NAVIGATION BUTTONS -->
     <a href="./home.html"><button class="button button2">HOME</button></a>
     <a href="./audio.html"><button class="button button2">AUDIO</button></a>
     <a href="./terminal.html"><button class="button button2">TERMINAL</button></a>
     <a href="./shop.html"><button class="button button2">SHOP</button></a>
-  </div>
+  </nav>
 
+<!-- RUBICON SKYE TITLE GRAPHIC -->
   <div class="section">
     <picture>
+	  <!-- FOR MOBILE -->
       <source media="(max-width: 1023px)" srcset="../assets/images/RSFONT3M.png" />
+      <!-- FOR DESKTOP -->
       <source media="(min-width: 1023px)" srcset="../assets/images/RSFONT3.png" />
       <img src="../assets/images/RSFONT3.png"
       style="width: 100%; height: auto;"
@@ -44,8 +52,9 @@
   <div class="section" id="foreword">
     <p>Thundering drums and distorted synths<br />
     usher in the sounds of the future under the Machine.<br />
-    We escaped the Grid to bring this message.<br />
-    TEAR DOWN THE <span style="color: #ff00ff;">RUBICON SKYE.</span>
+    We escaped the Grid to bring this message:<br />
+    <br />
+    TEAR DOWN THE <span style="color: #ff00ff; font-weight: 700;">RUBICON SKYE.</span>
     </p>
   </div>
 
@@ -57,11 +66,15 @@
 
     <!-- ABOUT N8 SECTION -->
     <div class="section" id="aboutN8">
+	  <!-- N8 IMAGE -->
       <img src="../assets/images/N8-2.jpg"/>
+
       <div>
+		<!-- N8 TITLE -->
         <div id="aboutN8Title">
         //N-8_SYNCHRONIZATION_MODULE:
         </div>
+        <!-- N8 DESCRIPTION -->
         <div class="section" id="aboutN8Text">
         The N-8 Synchronization Module thunders out into the
         neon expanse with deafening resolve, enforcing
@@ -74,11 +87,14 @@
 
     <!-- ABOUT K3 SECTION -->
     <div class="section" id="aboutK3">
+	  <!-- K3 IMAGE -->
       <img src="../assets/images/K3-3.jpg"/>
       <div>
+		<!-- K3 TITLE -->
         <div id="aboutN8Title">
         //K-3_COMMUNICATIONS_MATRIX:
         </div>
+        <!-- K3 DESCRIPTION -->
         <div class="section" id="aboutK3Text">
         The K-3 Communications Matrix brutally distributes data
         and instructions across the Rubicon Skye Audio Network
@@ -90,14 +106,17 @@
     </div>
   </div>
 
+  <!-- UPCOMING EVENTS SECTION -->
   <div>
     <div class="section" id="sectionHeader">//UPCOMING_SIMULATIONS:</div>
+
+    <!-- EVENT -->
     <div class="section" id="upcomingEvents">
       <div>
-        <div style="margin-bottom: 5%">Simulation Location: <span style="color: #ff00ff">Blue Fox Bar and Grill</span></div>
-        <div>Simulation Date: <span style="color: #ff00ff">12/12/12</span></div>
+        <div style="margin-bottom: 5%">Simulation Location: <br /><span style="color: #ff00ff">Blue Fox Bar and Grill</span></div>
+        <div style="margin-top: 5%">Simulation Date: <br /><span style="color: #ff00ff">12/12/12</span></div>
       </div>
-      <div>Come join us for a hard night of decompiling</div>
+      <div style="max-width: 20ch">Come join us at the Blue Fox Bar and Grill as we deconstruct the future.</div>
       <div>
         <div style="margin-bottom: 10%">Navigation Obelisk:</div>
         <div>
@@ -107,9 +126,51 @@
         </div>
       </div>
     </div>
+	<!-- END OF EVENT -->
+
+    <!-- EVENT -->
+    <div class="section" id="upcomingEvents">
+      <div>
+        <div style="margin-bottom: 5%">Simulation Location: <br /><span style="color: #ff00ff">Cafe 611</span></div>
+        <div style="margin-top: 5%">Simulation Date: <br /><span style="color: #ff00ff">12/12/12</span></div>
+      </div>
+      <div style="max-width: 20ch">The neon glow of the Grid falls upon Cafe 611.</div>
+      <div>
+        <div style="margin-bottom: 10%">Navigation Obelisk:</div>
+        <div>
+          <a href="https://www.facebook.com/cafe.611.official/" target="_blank">
+            <img src="../assets/images/EventsIMGLink.png" style="margin-bottom: 5%"></img>
+          </a>
+        </div>
+      </div>
+    </div>
+	<!-- END OF EVENT -->
+
+  <!-- END OF EVENTS SECTION -->
   </div>
+
+<!-- EVENT TEMPLATE, DO NOT DELETE
+    <div class="section" id="upcomingEvents">
+      <div>
+        <div style="margin-bottom: 5%">Simulation Location: <br /><span style="color: #ff00ff">Cafe 611</span></div>
+        <div style="margin-top: 5%">Simulation Date: <br /><span style="color: #ff00ff">12/12/12</span></div>
+      </div>
+      <div style="max-width: 20ch">The neon glow of the Grid falls upon Cafe 611.</div>
+      <div>
+        <div style="margin-bottom: 10%">Navigation Obelisk:</div>
+        <div>
+          <a href="https://www.facebook.com/cafe.611.official/" target="_blank">
+            <img src="../assets/images/EventsIMGLink.png" style="margin-bottom: 5%"></img>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+-->
 
   <!-- FOOTER SECTION -->
   <div class="section" id="footer"></div>
+
+<!-- THESE TAGS SIGNIFY THE END OF THE DOCUMENT, LEAVE THESE HERE -->
 </body>
 </html>
