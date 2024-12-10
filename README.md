@@ -6,6 +6,7 @@ TO DO:
 
 - Fully responsive elements
 - Optimize for mobile
+- Replace .png images with .svg as a personal preference
 - Integrate mailbox
 - Integrate mailing list
 - Integrate Printify/Shopify shop
