@@ -6,10 +6,11 @@ TO DO:
 
 - Fully responsive elements
 - Optimize for mobile
-- Replace .png images with .svg as a personal preference
+- Replace .png vector images with .svg as a personal preference
 - Integrate mailbox
-- Integrate mailing list
+- Integrate mailing list signup sheet
 - Integrate Printify/Shopify shop
 - Integrate real blogposting mechanism to replace my fake one (?)
-- Finish comments/instructions for non-coding bandmates
+- Complete accessibility features
+- Finish comments/instructions/readme for non-coding bandmates
 - World Domination
