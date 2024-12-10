@@ -2,7 +2,8 @@ Work in progress
 
 roadmap:
 
-- Responsive elements
+- Fully responsive elements
+- Optimize for mobile
 - Integrate mailbox
 - Integrate mailing list
 - Integrate audio streaming
