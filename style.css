@@ -6,20 +6,20 @@
 /* COMMENTS ARE NOT PROCESSED, ONLY FOR DEVELOPERS TO LOOK AT */
 /* READ THE COMMENTS FOR CONTEXT ON EACH PARAMETER */
 
-				/* THESE ARE GLOBAL WEBSITE PARAMETERS */
-
+/* THESE ARE GLOBAL WEBSITE PARAMETERS */
 body {
   /* All pages backgrounds - black with magenta gradient at bottom */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: url(./assets/images/RSGRID4.png), linear-gradient(to bottom, #000000 60%, #400040);
+  background-image: url(./assets/images/rsgrid.png), linear-gradient(to bottom, #000000 60%, #400040);
   background-attachment: local, fixed;
   background-size: contain, 100% 100%;
   background-position: center bottom, center;
   background-repeat: no-repeat, no-repeat;
+  overflow-x: hidden;
   /* Page margins - top, left/right, bottom */
-  margin: 1vw 2vw 10vh;
+  margin: 1vw 4vw 10vh;
   /* Global font and text info */
   text-align: center;
   font-size: calc(16px + 1vw);
@@ -31,33 +31,14 @@ body {
   /* This makes the text look glowy */
   text-shadow: 0 0 1rem #00FFFF;
 }
-
-@media (max-width: 1023px){
-/* This section collapses the website into a column for mobile viewers*/
-  body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 100vw;
-    text-align: center;
-    background-attachment: local, fixed;
-  }
-
-  .section {
-    justify-content: center;
-    align-items: flex-start;
-    gap: 1% 2%; /* row-gap column gap */
-  }
-}
+/* END OF GLOBAL WEBSITE PARAMETERS */
 
 				/* GLOBAL PAGE COMPONENTS */
 				/* COMPONENTS THAT ARE PRESENT ON EVERY PAGE */
 .section {
   display: flex;
-  flex-wrap: nowrap;
   justify-content: center;
   text-align: center;
-  gap: 1% 2%; /* row-gap column-gap */
 }
 
 .button {
@@ -70,9 +51,8 @@ body {
   font-weight: 700;
   font-style: normal;
   text-align: center;
-  font-size: 2vw;
   cursor: pointer;
-  -webkit-transition-duration: 0.4s; /* For Safari */
+  -webkit-transition-duration: 0.4s; /* Needed for Safari browsers only */
   transition-duration: 0.4s;
 }
 
@@ -86,7 +66,7 @@ body {
   margin: 0% 0% 1%;
 }
 
-#foreword{
+#foreword {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -94,11 +74,10 @@ body {
   padding-bottom: 5%;
 }
 
-#sectionHeader{
+#sectionHeader {
   justify-content: left;
   text-decoration-line: underline;
   text-decoration-style: solid;
-  font-size: 3vw;
   padding-bottom: 5%;
 }
 
@@ -115,15 +94,15 @@ body {
   margin-bottom: 5%;
 }
 
-#aboutN8Title {
+#aboutBandTitle {
   display: flex;
   justify-content: center;
-  font-size: 2.5vw;
+  font-size: 3vw;
   padding-bottom: 4%;
   text-decoration-line: underline;
 }
 
-#aboutN8Text {
+#aboutBandText {
   max-width: 60ch;
   font-size: 2vw;
   justify-content: center;
@@ -143,26 +122,11 @@ body {
   border-radius: .5em;
 }
 
-#aboutK3Title {
-  display: flex;
-  justify-content: center;
-  font-size: 2.5vw;
-  padding-bottom: 4%;
-  text-decoration-line: underline;
-}
-
-#aboutK3Text {
-  max-width: 60ch;
-  font-size: 2vw;
-  justify-content: center;
-  text-align: center;
-}
-
 .blogPost {
   display: flex;
   text-align: center;
   flex-direction: column;
-  margin: 5%;
+  margin-top: 5%;
   box-shadow: 0 0 .5em .1em #00FFFF;
   border-radius: .5em;
   justify-content: center;
@@ -170,6 +134,18 @@ body {
   padding: 5%;
   font-size: 1.5vw;
 }
+
+/*
+BLOG POST IS BROKEN ON MOBILE UNTIL I SPLIT SOME OF THE PARTS UP
+WORK IN PROGRESS
+.blogPostDate {
+
+}
+
+.blogPostBody {
+
+}
+*/
 
 #upcomingEvents {
   display: flex;
@@ -192,34 +168,219 @@ body {
 
 #upcomingEvents img:hover {
   cursor: pointer;
-  -webkit-transition-duration: 0.4s; /* For Safari */
+  -webkit-transition-duration: 0.4s; /* Needed for Safari browsers only */
   transition-duration: 0.4s;
   box-shadow: 0 0 .5em .1em #00FFFF;
 }
 
-#shopWindow {
+#spotifyEmbed > iframe {
   display: flex;
   text-align: center;
-  flex-direction: column;
-  margin: 5%;
-  box-shadow: 0 0 .5em .1em #00FFFF;
-  border-radius: .5em;
   justify-content: center;
-  align-items: flex-start;
-  padding: 5%;
-  font-size: 1.5vw;
-}
-
-#spotifyEmbed {
-  margin-top: 10%;
-  margin-bottom: 20%;
-  width: 100%;
-  height: auto;
+  margin-top: 5%;
+  margin-bottom: 30%;
   box-shadow: 0 0 .5em .1em #00FFFF;
   border-radius: .5em;
 }
 
+#printifyEmbed > iframe {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  width: 60vw;
+  height: 1600px;
+  box-shadow: 0 0 .5em .1em #00FFFF;
+  border-radius: .5em;
+}
 
 #footer {
   margin-top: 5%;
 }
+
+/* This section scales and reconfigures the webpages... */
+/* ...for different sized screens */
+/* Thanks for the breakpoints, Bootstrap */
+
+/* Small devices (small devices, below 576px) */
+@media (max-width: 576px) {
+  .button {
+    font-size: 4vw;
+    padding: 4vw 1vw;
+  }
+
+  #nav {
+    margin: 5% 0% 5%;
+    flex-direction: row;
+    gap: 1vw 10vw; /* row-gap column-gap */
+  }
+
+  #sectionHeader {
+    justify-content: center;
+    text-align: center;
+    font-size: 5vw;
+    padding-bottom: 5%;
+  }
+
+  #foreword {
+    font-size: 4vw;
+  }
+
+  #aboutN8 {
+    padding-bottom: 5%;
+    gap: 1vw 2vw; /* row-gap column-gap */
+  }
+
+  #aboutN8 img {
+    width: 24vw;
+    height: 50%;
+  }
+
+  #aboutK3 {
+    padding-bottom: 5%;
+    gap: 1vw 2vw; /* row-gap column-gap */
+  }
+
+  #aboutK3 img {
+    width: 24vw;
+    height: 50%;
+  }
+
+  #aboutBandTitle {
+    font-size: 4vw;
+  }
+
+  #aboutBandText {
+    max-width: 40ch;
+    font-size: 4vw;
+  }
+
+  .blogPost {
+    font-size: 3vw;
+    margin: 1%;
+    padding: 1%;
+  }
+
+  #upcomingEvents {
+    font-size: 4vw;
+  }
+
+  #printifyEmbed > iframe {
+    width: 100vw;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .button {
+    font-size: 4vw;
+    padding: 1vw 1vw;
+  }
+
+  #nav {
+    margin: 5% 0% 5%;
+    flex-direction: row;
+    gap: 1vw 10vw; /* row-gap column-gap */
+  }
+
+  #sectionHeader {
+    justify-content: center;
+    text-align: center;
+    font-size: 5vw;
+    padding-bottom: 5%;
+  }
+
+  #foreword {
+    font-size: 4vw;
+  }
+
+  #aboutN8 {
+    padding-bottom: 5%;
+    gap: 1vw 2vw; /* row-gap column-gap */
+  }
+
+  #aboutN8 img {
+    width: 30vw;
+    height: auto;
+  }
+
+  #aboutK3 {
+    padding-bottom: 5%;
+    gap: 1vw 2vw; /* row-gap column-gap */
+  }
+
+  #aboutK3 img {
+    width: 30vw;
+    height: auto;
+  }
+
+  #aboutBandTitle {
+    font-size: 3vw;
+  }
+
+  #aboutBandText {
+    max-width: 50ch;
+    font-size: 3.5vw;
+  }
+
+  .blogPost {
+    font-size: 3vw;
+    margin: 1%;
+    padding: 1%;
+  }
+
+  #upcomingEvents {
+    font-size: 4vw;
+  }
+
+  #printifyEmbed > iframe {
+    width: 100vw;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .button {
+    font-size: 3vw;
+    padding: 1vw 4vw;
+  }
+
+  #sectionHeader {
+    font-size: 3.5vw;
+  }
+
+  #printifyEmbed > iframe {
+    width: 100vw;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .button {
+    font-size: 3vw;
+    padding: 1vw 4vw;
+  }
+
+  #sectionHeader {
+    font-size: 3.5vw;
+  }
+
+  .blogPost {
+    font-size: 2vw;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .button{
+    font-size: 2vw;
+    padding: 1vw 4vw;
+  }
+
+  #sectionHeader {
+    font-size: 3.5vw;
+  }
+}
+
+/* End of scaling section */
