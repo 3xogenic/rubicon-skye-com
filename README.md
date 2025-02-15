@@ -10,5 +10,4 @@ TO DO:
 - Integrate mailing list signup sheet
 - Integrate real blogposting mechanism to replace my fake one (?)
 - Complete accessibility features
-- Finish comments/instructions/readme for non-coding bandmates
 - World Domination
